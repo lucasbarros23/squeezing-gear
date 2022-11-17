@@ -1,0 +1,15 @@
+## Install Apache ## 
+# sudo yum update
+# sudo yum install httpd
+# sudo systemctl start httpd
+# sudo systemctl enable httpd
+
+#Validate and Restart Apache
+sudo systemctl status httpd
+sudo systemctl restart httpd
+
+
+
+Abrir porta 80 para o tráfefo web
+
+# firewall-cmd --add-service=http --permanent
