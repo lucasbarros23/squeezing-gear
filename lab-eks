@@ -1,0 +1,35 @@
+create cluster eks
+
+# aws eks create-cluster --name producao --role-arn arn:aws:iam::442701911909:role/eksClusterRole --resources-vpc-config subnetIds=subnet-0c0fab41c38f27e2c,subnet-06b0362b8f8225c43,subnet-06e72b648e6b3ca90,securityGroupIds=sg-0d394c19ab2bc4308
+
+
+describe cluster 
+
+# aws eks describe-cluster --name producao
+
+
+aws-iam-authenticator
+
+# curl -Lo aws-iam-authenticator https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.5.9/aws-iam-authenticator_0.5.9_linux_amd64
+ 2000  chmod +x ./aws-iam-authenticator
+# mv aws-iam-authenticator .local/bin
+# aws eks update-kubeconfig --name producao
+# kubectl get svc
+
+
+
+url para baixa template do cloudformation para criação dos nodes:
+ https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2018-12-10/amazon-eks-nodegroup.yaml.
+ 
+ url para baixar o aws-auth-cm, arquivo de configuração para ingressar nodes no cluster EKS
+ https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2018-08-30/aws-auth-cm.yaml.
+ 
+
+
+
+
+
+
+
+
+
